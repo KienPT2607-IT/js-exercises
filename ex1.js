@@ -3,7 +3,7 @@ Bài 1:
 Viết một hàm chuyển đổi nhiệt độ từ thang Celsius chuyển sang thang đo fahrenhei.
 vd output là: "60°C bằng 140 °F"
 */
-
+// Sai công thức
 function convertCelsiusToFahrenhei(celsius) {
    return celsius + 33.8
 }
