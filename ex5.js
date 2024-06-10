@@ -2,7 +2,7 @@
 Tham số truyền vào là 1 chuỗi dài hơn 15 ký tự.
 Kết quả là chuỗi đó sau khi cắt đi còn 10 ký tự, cuối chuỗi có dấu " …" biểu thị là chuỗi bị cắt.
 */
-
+// Nếu biến tạo ra không để làm gì thì return thẳng
 function concatStringWithElipsis(originString) {
    let newString = originString.substring(0, 10) + "..."
    return newString
