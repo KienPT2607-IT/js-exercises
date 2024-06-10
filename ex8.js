@@ -6,7 +6,7 @@ Giả sử tham số đầu vào là 1 object có dạng như sau:
    confirm: "secret"
 }
 Hãy kiểm tra username phải khác rỗng và không được vượt quá 20 ký tự, password phải có độ dài từ 6 đến 32 ký tự, confirm phải giống password. */
-
+// Cách này ngắn nhưng với những hàm validate nên trả ra kiểu dữ liệu boolean.
 function checkAccountValidation(newAccount) {
    if (!newAccount.username || newAccount.username.length > 20)
       return "Failed"
