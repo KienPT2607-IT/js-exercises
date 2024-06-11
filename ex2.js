@@ -4,14 +4,15 @@ Ví dụ cho chuỗi "123" thì kết quả sẽ là "123-123-123-123-123-123-12
 */
 
 // Dùng các method có sẵn của JS. Tạo mảng sau đó join các elements thay vì loop rồi ghép chuỗi
-function muliplyString(arg) {
-   let result = ""
-   for (let index = 0; index < 10; index++) {
-      result += arg + "-"
-   }
-   result = result.substring(0, result.length - 1)
-   return result
+/**
+ * @param {string} s - The input string
+ * @param {int} times - The times that string will be multiplied
+ */
+function multiplyString(s, times) {
+   let arr = Array(times)
+   arr.fill(s)
+   return arr.join("-")
 }
 
-let a = muliplyString("qwerty")
+let a = multiplyString("qwerty", 10)
 console.log(a);
