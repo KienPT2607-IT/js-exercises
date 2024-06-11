@@ -6,16 +6,6 @@ let newArr = []
 for (let index = 0; index < arr.length; index++) {
    if (arr[index] % 2 == 1) newArr.push(arr[index])
 }
-
-// Insertion sort
-for (let i = 0; i < newArr.length - 1; i++) {
-   for (let j = i + 1; j >= 0; j--) {
-      if (newArr[j] > newArr[j - 1]) {
-         let temp = newArr[j]
-         newArr[j] = newArr[j - 1]
-         newArr[j - 1] = temp
-      }
-   }
-}
+newArr.sort((a, b) => a - b)
 
 console.log(newArr);
