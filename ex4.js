@@ -17,8 +17,7 @@ function calculateFactorial(num) {
 }
 // Đệ quy nhìn thì ngắn hơn nhưng sẽ dẫn tới stack limit nếu tham số lớn
 function calculateFactorrialRescursive(num) {
-  if (num == 1) return 1; // Có thể dùng ||
-  if (num == 0) return 1;
+  if (num == 1 || num == 0) return 1; // Có thể dùng ||
   return num * calculateFactorrialRescursive(num - 1);
 }
 
