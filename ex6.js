@@ -3,17 +3,15 @@ Tham số truyền vào là 1 chuỗi.
 Kết quả là 1 chuỗi mới chỉ viết hoa từ đầu tiên. Ví dụ "morSofware" sẽ được convert thành "Morsofware". */
 
 // Lấy ký tự đầu tiên (index 0) trong chuỗi ghép với chuỗi sau khi đã cắt ký tự đầu tiên
+/**
+ * 
+ * @param {string} word 
+ * @returns 
+ */
 function CapitalizeAWord(word) {
-   let newWord = word[0].toUpperCase()
-   for (let i = 1; i < word.length; i++) {
-      if (word[i] != word[i].toUpperCase()) {
-         newWord += word[i]
-      } else {
-         newWord += word[i].toLowerCase()
-      }
-   }
-   return newWord
+   let restOfWord = (word.substring(1)).toLowerCase()
+   return word[0].toUpperCase() + restOfWord
 }
 
-console.log(CapitalizeAWord("morSofware"));
+console.log(CapitalizeAWord("morSoftware"));
 console.log(CapitalizeAWord("tHisISaWorD"));
