@@ -7,17 +7,23 @@ Giả sử tham số đầu vào là 1 object có dạng như sau:
 }
 Hãy kiểm tra username phải khác rỗng và không được vượt quá 20 ký tự, password phải có độ dài từ 6 đến 32 ký tự, confirm phải giống password. */
 // Cách này ngắn nhưng với những hàm validate nên trả ra kiểu dữ liệu boolean.
-function checkAccountValidation(newAccount) {
+
+/**
+ * 
+ * @param {*} newAccount 
+ * @returns true if account met the validation conditions otherwise false 
+ */
+function isAccountValid(newAccount) {
    if (!newAccount.username || newAccount.username.length > 20)
-      return "Failed"
+      return false
    if (newAccount.password.length < 6 || newAccount.password.length > 32)
-      return "Failed"
+      return false
    if (newAccount.password !== newAccount.confirm)
-      return "Failed"
-   return "Passed";
+      return false
+   return true;
 }
 
-console.log(checkAccountValidation({
+console.log(isAccountValid({
    "username": "",
    "password": "12345678",
    "confirm": "12345678",
