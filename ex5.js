@@ -3,11 +3,9 @@ Tham số truyền vào là 1 chuỗi dài hơn 15 ký tự.
 Kết quả là chuỗi đó sau khi cắt đi còn 10 ký tự, cuối chuỗi có dấu " …" biểu thị là chuỗi bị cắt.
 */
 // Nếu biến tạo ra không để làm gì thì return thẳng
-function concatStringWithElipsis(originString) {
-   let newString = originString.substring(0, 10) + "..."
-   return newString
-}
+let concatStringWithEllipsis = (originString) => originString.substring(0, 10) + "..."
 
-// let result = concatStringWithElipsis("012345678901234567890")
-let result = concatStringWithElipsis("this is a very long string")
+
+// let result = concatStringWithEllipsis("012345678901234567890")
+let result = concatStringWithEllipsis("this is a very long string")
 console.log(result);
